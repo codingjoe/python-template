@@ -1,0 +1,11 @@
+{
+    "name": "Project Name",
+    "description": "A package that does one thing and does it well",
+    "pypi_name": "{{ cookiecutter.name.lower().replace(' ', '_').replace('-', '_') }}",
+    "package_name": "{{ cookiecutter.name.lower().replace(' ', '_').replace('-', '_') }}",
+    "author": "Johannes Hoppe",
+    "author_email": "info@johanneshoppe.com",
+    "github_username": "codingjoe",
+    "github_repository": "{{ cookiecutter.pypi_name }}",
+    "keywords": ""
+}

@@ -1,0 +1,29 @@
+language: python
+dist: xenial
+python:
+- 3.5
+- 3.6
+- 3.7
+install: pip install tox-travis codecov
+script: tox
+after_success: codecov
+stages:
+- test
+- name: deploy
+  if: tag IS present
+jobs:
+  include:
+  - python: 3.5
+    env: TOXENV=docs
+  - stage: deploy
+    python: 3.7
+    install: true
+    script: true
+    after_success: true
+    deploy:
+      provider: pypi
+      user: codingjoe
+      distributions: sdist bdist_wheel
+      on:
+        tags: true
+      password:
