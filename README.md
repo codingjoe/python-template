@@ -2,6 +2,6 @@
 Cookiecutter template for Python packages
 
 ```
-pip isntall -U cookiecutter
+pip install -U cookiecutter
 cookiecutter gh:codingjoe/python-template
 ```
